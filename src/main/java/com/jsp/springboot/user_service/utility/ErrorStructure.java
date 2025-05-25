@@ -2,7 +2,7 @@ package com.jsp.springboot.user_service.utility;
 
 public class ErrorStructure<T> {
 	private int errorCode;
-	private String eroorMessage;
+	private String errorMessage;
 	private T error;
 	public int getErrorCode() {
 		return errorCode;
@@ -10,11 +10,11 @@ public class ErrorStructure<T> {
 	public void setErrorCode(int errorCode) {
 		this.errorCode = errorCode;
 	}
-	public String getEroorMessage() {
-		return eroorMessage;
+	public String getErrorMessage() {
+		return errorMessage;
 	}
-	public void setEroorMessage(String eroorMessage) {
-		this.eroorMessage = eroorMessage;
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}
 	public T getError() {
 		return error;

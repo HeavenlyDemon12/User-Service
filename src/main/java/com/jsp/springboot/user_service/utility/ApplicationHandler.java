@@ -12,9 +12,9 @@ public class ApplicationHandler {
 
 	@ExceptionHandler
 	public ResponseEntity<ErrorStructure<String>> handleUserNotFound(NoSuchUserException e){
-		ErrorStructure<String> er=new ErrorStructure<String>();
+		ErrorStructure<String> er=new ErrorStructure<>();
 		er.setErrorCode(HttpStatus.NOT_FOUND.value());
-		er.setEroorMessage(e.getMessage());
+		er.setErrorMessage(e.getMessage());
 		er.setError("Employee with the requested ID is not present in the Data Base");
 		return new ResponseEntity<ErrorStructure<String>>(er,HttpStatus.NOT_FOUND);
 	}
